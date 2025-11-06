@@ -143,8 +143,8 @@ This project successfully implements all requirements from Individual Assignment
 ### **Installation Steps**
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/draft-book-swap.git
-cd draft-book-swap
+git clone https://github.com/DLOADIN/Book-swap.git
+cd Book-swap
 
 # Install dependencies
 flutter pub get
