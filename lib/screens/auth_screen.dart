@@ -251,6 +251,7 @@ class _AuthScreenState extends State<AuthScreen> {
                 const SizedBox(height: 32),
                 SizedBox(
                   height: 50,
+                  width: double.infinity,
                   child: ElevatedButton(
                     onPressed: loading
                         ? null
@@ -326,6 +327,7 @@ class _AuthScreenState extends State<AuthScreen> {
                         borderRadius: BorderRadius.circular(12),
                       ),
                       elevation: 2,
+                      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
                     ),
                     child: loading
                         ? SizedBox(
@@ -343,7 +345,9 @@ class _AuthScreenState extends State<AuthScreen> {
                             style: const TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.w600,
+                              letterSpacing: 0.5,
                             ),
+                            textAlign: TextAlign.center,
                           ),
                   ),
                 ),
@@ -360,16 +364,21 @@ class _AuthScreenState extends State<AuthScreen> {
                     });
                   },
                   style: TextButton.styleFrom(
-                    padding: const EdgeInsets.symmetric(vertical: 12),
+                    padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
+                    minimumSize: const Size(0, 44),
                   ),
                   child: Text(
                     isLogin
-                        ? "Don't have an account? Create one"
-                        : 'Already have an account? Sign in',
+                        ? "Don't have an account? Sign Up"
+                        : 'Already have an account? Sign In',
                     style: TextStyle(
                       fontSize: 14,
                       color: theme.colorScheme.primary,
+                      fontWeight: FontWeight.w500,
                     ),
+                    textAlign: TextAlign.center,
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
                   ),
                 ),
                 const SizedBox(height: 40),
