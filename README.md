@@ -52,30 +52,6 @@ This project successfully implements all requirements from Individual Assignment
 - Messages stored in Firebase Firestore
 - Live message synchronization
 
-## 🏗️ Architecture & Technical Implementation
-
-### **State Management - Provider Pattern**
-```dart
-// AuthProvider manages user authentication state
-class AuthProvider extends ChangeNotifier {
-  User? _user;
-  bool get isAuthenticated => _user != null;
-  
-  Future<void> signIn(String email, String password) async {
-    // Implementation with Firebase Auth
-  }
-}
-
-// BookProvider handles all book-related operations
-class BookProvider extends ChangeNotifier {
-  List<Book> _books = [];
-  
-  Future<void> createBook(Book book) async {
-    // CRUD operations with Firestore
-    notifyListeners(); // Reactive UI updates
-  }
-}
-```
 
 **Why Provider?**
 - Simple and efficient state management
@@ -148,52 +124,6 @@ class BookProvider extends ChangeNotifier {
 }
 ```
 
-### **Swap State Management**
-
-The swap functionality follows a clear state machine:
-
-```
-Available Book → Swap Request → Pending State → Accepted/Rejected
-```
-
-**Implementation Details:**
-1. **Initial State**: Book status = "available"
-2. **Swap Request**: Creates SwapOffer document, book status → "pending"
-3. **Real-time Updates**: Both users see status changes instantly
-4. **Final State**: Status updates to "swapped" or reverts to "available"
-
-### **Real-time Synchronization**
-```dart
-// Real-time book updates using StreamBuilder
-StreamBuilder<QuerySnapshot>(
-  stream: FirebaseFirestore.instance
-    .collection('books')
-    .snapshots(),
-  builder: (context, snapshot) {
-    // UI updates automatically when data changes
-  },
-)
-```
-
-## 🎨 UI/UX Design Philosophy
-
-### **Green Theme & Eco-Friendly Design**
-- **Primary Colors**: Forest Green (#2E7D32), Light Green (#4CAF50)
-- **Modern Material Design 3** with custom green color scheme
-- **Sustainability Focus**: Visual elements emphasize eco-friendly book sharing
-
-### **Modern Component Design**
-- **Gradient Backgrounds**: Smooth transitions between green tones
-- **Elevated Cards**: Modern card design with shadows and rounded corners
-- **Animated Navigation**: Smooth transitions between screens
-- **Responsive Layout**: Optimized for various screen sizes
-
-### **User Experience Enhancements**
-- **Loading States**: Visual feedback for all async operations
-- **Error Handling**: Comprehensive error messages and recovery
-- **Confirmation Dialogs**: Safety measures for destructive actions
-- **Real-time Updates**: Instant UI updates without manual refresh
-
 ## 🛠️ Installation & Setup
 
 ### **Prerequisites**
@@ -223,66 +153,7 @@ flutter pub get
 flutter run
 ```
 
-### **Firebase Rules Setup**
 
-**Firestore Rules:**
-```javascript
-rules_version = '2';
-service cloud.firestore {
-  match /databases/{database}/documents {
-    // Users can read/write their own data
-    match /users/{userId} {
-      allow read, write: if request.auth != null && request.auth.uid == userId;
-    }
-    
-    // Books are readable by all, writable by owner
-    match /books/{bookId} {
-      allow read: if request.auth != null;
-      allow write: if request.auth != null && 
-        (resource == null || resource.data.ownerId == request.auth.uid);
-    }
-    
-    // Swap offers
-    match /swapOffers/{offerId} {
-      allow read, write: if request.auth != null && 
-        (resource.data.fromUserId == request.auth.uid || 
-         resource.data.toUserId == request.auth.uid);
-    }
-  }
-}
-```
-
-## 📁 Project Structure
-
-```
-lib/
-├── main.dart                 # App entry point
-├── app.dart                 # App configuration & theme
-├── firebase_options.dart    # Firebase configuration
-├── models/                  # Data models
-│   ├── book.dart
-│   └── user_model.dart
-├── providers/               # State management
-│   ├── auth_provider.dart
-│   └── book_provider.dart
-├── screens/                 # UI screens
-│   ├── auth_screen.dart
-│   ├── dashboard_screen.dart
-│   ├── explore_books_screen.dart
-│   ├── my_library_screen.dart
-│   ├── community_screen.dart
-│   ├── profile_screen.dart
-│   ├── book_detail_screen.dart
-│   ├── edit_book_screen.dart
-│   └── chat_screen.dart
-├── widgets/                 # Reusable components
-│   ├── modern_book_card.dart
-│   ├── stats_card.dart
-│   └── quick_action_card.dart
-├── services/               # Backend services
-│   └── firestore_service.dart
-└── main_navigation_screen.dart
-```
 
 ## 🔧 Key Features Implemented
 
@@ -317,52 +188,6 @@ lib/
 - Error handling
 - Responsive design
 
-## 🎥 Demo Video Features
-
-The demo video covers:
-1. **User Authentication Flow**: Registration, email verification, login
-2. **Book CRUD Operations**: Creating, editing, deleting listings
-3. **Swap Functionality**: Initiating swaps, state changes
-4. **Real-time Updates**: Simultaneous Firebase console view
-5. **Chat System**: Messaging between users
-6. **Navigation**: All screen transitions
-
-## 🔍 Testing & Quality Assurance
-
-### **Dart Analyzer Results**
-- **Zero warnings** achieved through comprehensive code cleanup
-- **Lint rules compliance** with Flutter best practices
-- **Type safety** ensured throughout the codebase
-
-### **Error Handling**
-- Network connectivity issues
-- Firebase authentication errors
-- Image upload failures
-- Form validation errors
-- Loading state management
-
-## 🚀 Design Decisions & Trade-offs
-
-### **State Management Choice: Provider**
-**Pros:**
-- Simple learning curve
-- Excellent Flutter integration
-- Perfect for Firebase real-time updates
-- Minimal boilerplate code
-
-**Cons:**
-- Less suitable for very complex state logic
-- Can become unwieldy in large applications
-
-### **Database Structure**
-**Design Choice:** Normalized collections vs. denormalized data
-- **Chosen Approach:** Moderate denormalization for performance
-- **Trade-off:** Slightly more complex updates for better read performance
-
-### **Image Storage**
-**Design Choice:** Firebase Storage vs. Base64 encoding
-- **Chosen Approach:** Firebase Storage for better performance
-- **Trade-off:** Additional Firebase service vs. simpler implementation
 
 ## 🔮 Future Enhancements
 
