@@ -19,6 +19,7 @@ migrate_working_dir/
 .idea/
 
 DESIGN_SUMMARY.md
+firebase.json
 DART_ANALYZER_REPORT.txt
 
 # The .vscode folder contains launch configuration and tasks you configure in
