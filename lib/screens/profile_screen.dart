@@ -80,7 +80,7 @@ class _ProfileScreenState extends State<ProfileScreen>
                                   shape: BoxShape.circle,
                                   boxShadow: [
                                     BoxShadow(
-                                      color: Colors.black.withOpacity(0.2),
+                                      color: Colors.black.withValues(alpha: 0.2),
                                       blurRadius: 10,
                                       offset: const Offset(0, 4),
                                     ),
@@ -123,7 +123,7 @@ class _ProfileScreenState extends State<ProfileScreen>
                               Text(
                                 auth.user?.email ?? '',
                                 style: TextStyle(
-                                  color: Colors.white.withOpacity(0.9),
+                                  color: Colors.white.withValues(alpha: 0.9),
                                   fontSize: 16,
                                 ),
                               ),
@@ -136,13 +136,13 @@ class _ProfileScreenState extends State<ProfileScreen>
                                   vertical: 8,
                                 ),
                                 decoration: BoxDecoration(
-                                  color: Colors.white.withOpacity(0.2),
+                                  color: Colors.white.withValues(alpha: 0.2),
                                   borderRadius: BorderRadius.circular(20),
                                 ),
                                 child: Text(
                                   'Member since ${_formatDate(auth.user?.metadata.creationTime)}',
                                   style: TextStyle(
-                                    color: Colors.white.withOpacity(0.9),
+                                    color: Colors.white.withValues(alpha: 0.9),
                                     fontSize: 12,
                                   ),
                                 ),
@@ -187,7 +187,7 @@ class _ProfileScreenState extends State<ProfileScreen>
         borderRadius: BorderRadius.circular(20),
         boxShadow: [
           BoxShadow(
-            color: theme.colorScheme.shadow.withOpacity(0.1),
+            color: theme.colorScheme.shadow.withValues(alpha: 0.1),
             blurRadius: 10,
             offset: const Offset(0, 4),
           ),
@@ -259,13 +259,13 @@ class _ProfileScreenState extends State<ProfileScreen>
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
           colors: [
-            theme.colorScheme.primaryContainer.withOpacity(0.3),
-            theme.colorScheme.secondaryContainer.withOpacity(0.3),
+            theme.colorScheme.primaryContainer.withValues(alpha: 0.3),
+            theme.colorScheme.secondaryContainer.withValues(alpha: 0.3),
           ],
         ),
         borderRadius: BorderRadius.circular(20),
         border: Border.all(
-          color: theme.colorScheme.primary.withOpacity(0.2),
+          color: theme.colorScheme.primary.withValues(alpha: 0.2),
         ),
       ),
       child: Column(
@@ -293,7 +293,7 @@ class _ProfileScreenState extends State<ProfileScreen>
           Text(
             'EcoBookHub is a sustainable book sharing platform that connects book lovers and promotes the circular economy. Share your books, discover new reads, and help reduce paper waste.',
             style: TextStyle(
-              color: theme.colorScheme.onSurface.withOpacity(0.7),
+              color: theme.colorScheme.onSurface.withValues(alpha: 0.7),
               height: 1.5,
             ),
           ),
@@ -322,7 +322,7 @@ class _ProfileScreenState extends State<ProfileScreen>
       leading: Container(
         padding: const EdgeInsets.all(8),
         decoration: BoxDecoration(
-          color: (textColor ?? theme.colorScheme.primary).withOpacity(0.1),
+          color: (textColor ?? theme.colorScheme.primary).withValues(alpha: 0.1),
           borderRadius: BorderRadius.circular(10),
         ),
         child: Icon(
@@ -341,14 +341,14 @@ class _ProfileScreenState extends State<ProfileScreen>
       subtitle: Text(
         subtitle,
         style: TextStyle(
-          color: theme.colorScheme.onSurface.withOpacity(0.6),
+          color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
           fontSize: 12,
         ),
       ),
       trailing: Icon(
         Icons.arrow_forward_ios_rounded,
         size: 16,
-        color: theme.colorScheme.onSurface.withOpacity(0.3),
+        color: theme.colorScheme.onSurface.withValues(alpha: 0.3),
       ),
       onTap: onTap,
       contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
@@ -359,10 +359,10 @@ class _ProfileScreenState extends State<ProfileScreen>
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
       decoration: BoxDecoration(
-        color: theme.colorScheme.primary.withOpacity(0.1),
+        color: theme.colorScheme.primary.withValues(alpha: 0.1),
         borderRadius: BorderRadius.circular(20),
         border: Border.all(
-          color: theme.colorScheme.primary.withOpacity(0.3),
+          color: theme.colorScheme.primary.withValues(alpha: 0.3),
         ),
       ),
       child: Text(

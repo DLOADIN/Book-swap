@@ -121,7 +121,7 @@ class _EditBookScreenState extends State<EditBookScreen> {
                     errorBuilder: (context, error, stackTrace) {
                       return Container(
                         height: 200,
-                        color: Theme.of(context).colorScheme.surfaceVariant,
+                        color: Theme.of(context).colorScheme.surfaceContainerHighest,
                         child: const Icon(Icons.broken_image_outlined, size: 48),
                       );
                     },
@@ -148,7 +148,7 @@ class _EditBookScreenState extends State<EditBookScreen> {
           color: Theme.of(context).colorScheme.surface,
           borderRadius: BorderRadius.circular(12),
           border: Border.all(
-            color: Theme.of(context).colorScheme.outline.withOpacity(0.3),
+            color: Theme.of(context).colorScheme.outline.withValues(alpha: 0.3),
           ),
         ),
         child: InkWell(
@@ -160,13 +160,13 @@ class _EditBookScreenState extends State<EditBookScreen> {
               Icon(
                 Icons.add_photo_alternate_outlined,
                 size: 48,
-                color: Theme.of(context).colorScheme.onSurface.withOpacity(0.5),
+                color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5),
               ),
               const SizedBox(height: 8),
               Text(
                 'Tap to add image',
                 style: TextStyle(
-                  color: Theme.of(context).colorScheme.onSurface.withOpacity(0.6),
+                  color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.6),
                 ),
               ),
             ],
@@ -221,7 +221,7 @@ class _EditBookScreenState extends State<EditBookScreen> {
               ),
               const SizedBox(height: 20),
               DropdownButtonFormField<String>(
-                value: condition,
+                initialValue: condition,
                 decoration: InputDecoration(
                   labelText: 'Condition',
                   prefixIcon: const Icon(Icons.star_outline_rounded),

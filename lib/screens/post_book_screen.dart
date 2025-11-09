@@ -101,7 +101,7 @@ class _PostBookScreenState extends State<PostBookScreen> {
               ),
               const SizedBox(height: 20),
               DropdownButtonFormField<String>(
-                value: condition,
+                initialValue: condition,
                 decoration: InputDecoration(
                   labelText: 'Condition',
                   prefixIcon: const Icon(Icons.star_outline_rounded),
@@ -136,7 +136,7 @@ class _PostBookScreenState extends State<PostBookScreen> {
                         color: theme.colorScheme.surface,
                         borderRadius: BorderRadius.circular(12),
                         border: Border.all(
-                          color: theme.colorScheme.outline.withOpacity(0.3),
+                          color: theme.colorScheme.outline.withValues(alpha: 0.3),
                         ),
                       ),
                       child: InkWell(
@@ -148,13 +148,13 @@ class _PostBookScreenState extends State<PostBookScreen> {
                             Icon(
                               Icons.add_photo_alternate_outlined,
                               size: 48,
-                              color: theme.colorScheme.onSurface.withOpacity(0.5),
+                              color: theme.colorScheme.onSurface.withValues(alpha: 0.5),
                             ),
                             const SizedBox(height: 8),
                             Text(
                               'Tap to add image',
                               style: TextStyle(
-                                color: theme.colorScheme.onSurface.withOpacity(0.6),
+                                color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
                               ),
                             ),
                           ],

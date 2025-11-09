@@ -12,8 +12,8 @@ void main() async {
     );
 
     await FirebaseAppCheck.instance.activate(
-      androidProvider: AndroidProvider.debug, // change for production
-      // webRecaptchaSiteKey: 'REPLACE_WITH_WEB_KEY_IF_WEB_ONLY',
+      // androidProvider deprecated - using platform-specific providers
+      // For production, configure App Check in Firebase Console
     );
   } catch (e) {
     // Handle initialization error silently

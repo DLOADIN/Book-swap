@@ -123,13 +123,13 @@ class _MainNavigationScreenState extends State<MainNavigationScreen>
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
             colors: [
-              theme.colorScheme.primary.withOpacity(0.1),
-              theme.colorScheme.primary.withOpacity(0.05),
+              theme.colorScheme.primary.withValues(alpha: 0.1),
+              theme.colorScheme.primary.withValues(alpha: 0.05),
             ],
           ),
           boxShadow: [
             BoxShadow(
-              color: theme.colorScheme.primary.withOpacity(0.2),
+              color: theme.colorScheme.primary.withValues(alpha: 0.2),
               blurRadius: 20,
               offset: const Offset(0, -5),
             ),
@@ -155,7 +155,7 @@ class _MainNavigationScreenState extends State<MainNavigationScreen>
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(16),
                         color: isSelected
-                            ? theme.colorScheme.primary.withOpacity(0.1)
+                            ? theme.colorScheme.primary.withValues(alpha: 0.1)
                             : Colors.transparent,
                       ),
                       child: Column(
@@ -165,7 +165,7 @@ class _MainNavigationScreenState extends State<MainNavigationScreen>
                             isSelected ? item.activeIcon : item.icon,
                             color: isSelected
                                 ? theme.colorScheme.primary
-                                : theme.colorScheme.onSurface.withOpacity(0.6),
+                                : theme.colorScheme.onSurface.withValues(alpha: 0.6),
                             size: 24,
                           ),
                           const SizedBox(height: 4),
@@ -176,7 +176,7 @@ class _MainNavigationScreenState extends State<MainNavigationScreen>
                               fontWeight: isSelected ? FontWeight.w600 : FontWeight.w400,
                               color: isSelected
                                   ? theme.colorScheme.primary
-                                  : theme.colorScheme.onSurface.withOpacity(0.6),
+                                  : theme.colorScheme.onSurface.withValues(alpha: 0.6),
                             ),
                           ),
                         ],

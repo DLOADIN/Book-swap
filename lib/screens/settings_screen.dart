@@ -37,7 +37,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12),
                 side: BorderSide(
-                  color: theme.colorScheme.outline.withOpacity(0.2),
+                  color: theme.colorScheme.outline.withValues(alpha: 0.2),
                 ),
               ),
               child: ListTile(
@@ -55,7 +55,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 subtitle: Text(
                   auth.user?.email ?? 'N/A',
                   style: TextStyle(
-                    color: theme.colorScheme.onSurface.withOpacity(0.6),
+                    color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
                   ),
                 ),
               ),
@@ -66,7 +66,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               style: TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.w600,
-                color: theme.colorScheme.onSurface.withOpacity(0.7),
+                color: theme.colorScheme.onSurface.withValues(alpha: 0.7),
               ),
             ),
             const SizedBox(height: 12),
@@ -75,7 +75,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12),
                 side: BorderSide(
-                  color: theme.colorScheme.outline.withOpacity(0.2),
+                  color: theme.colorScheme.outline.withValues(alpha: 0.2),
                 ),
               ),
               child: Column(
@@ -86,7 +86,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       'Receive reminders about your swaps',
                       style: TextStyle(
                         fontSize: 12,
-                        color: theme.colorScheme.onSurface.withOpacity(0.5),
+                        color: theme.colorScheme.onSurface.withValues(alpha: 0.5),
                       ),
                     ),
                     value: notifications,
@@ -101,7 +101,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     height: 1,
                     indent: 16,
                     endIndent: 16,
-                    color: theme.colorScheme.outline.withOpacity(0.2),
+                    color: theme.colorScheme.outline.withValues(alpha: 0.2),
                   ),
                   SwitchListTile(
                     title: const Text('Email updates'),
@@ -109,7 +109,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       'Get email notifications about activity',
                       style: TextStyle(
                         fontSize: 12,
-                        color: theme.colorScheme.onSurface.withOpacity(0.5),
+                        color: theme.colorScheme.onSurface.withValues(alpha: 0.5),
                       ),
                     ),
                     value: emailUpdates,

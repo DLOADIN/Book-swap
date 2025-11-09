@@ -40,9 +40,9 @@ class _AuthScreenState extends State<AuthScreen> {
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
             colors: [
-              theme.colorScheme.primary.withOpacity(0.1),
-              theme.colorScheme.secondary.withOpacity(0.1),
-              theme.colorScheme.tertiary.withOpacity(0.1),
+              theme.colorScheme.primary.withValues(alpha: 0.1),
+              theme.colorScheme.secondary.withValues(alpha: 0.1),
+              theme.colorScheme.tertiary.withValues(alpha: 0.1),
             ],
           ),
         ),
@@ -72,7 +72,7 @@ class _AuthScreenState extends State<AuthScreen> {
                       shape: BoxShape.circle,
                       boxShadow: [
                         BoxShadow(
-                          color: theme.colorScheme.primary.withOpacity(0.3),
+                          color: theme.colorScheme.primary.withValues(alpha: 0.3),
                           blurRadius: 20,
                           offset: const Offset(0, 8),
                         ),
@@ -113,7 +113,7 @@ class _AuthScreenState extends State<AuthScreen> {
                     isLogin ? 'Welcome back to the green library!' : 'Join the eco-friendly reading community',
                     style: TextStyle(
                       fontSize: 16,
-                      color: theme.colorScheme.onSurface.withOpacity(0.6),
+                      color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
                     ),
                     textAlign: TextAlign.center,
                   ),

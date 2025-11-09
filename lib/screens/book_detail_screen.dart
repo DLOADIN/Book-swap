@@ -45,7 +45,7 @@ class _BookDetailScreenState extends State<BookDetailScreen> {
               Container(
                 height: 300,
                 width: double.infinity,
-                color: theme.colorScheme.surfaceVariant,
+                color: theme.colorScheme.surfaceContainerHighest,
                 child: widget.book.imageUrl.isNotEmpty
                     ? widget.book.imageUrl.startsWith('data:image')
                         ? Image.memory(
@@ -98,7 +98,7 @@ class _BookDetailScreenState extends State<BookDetailScreen> {
                         Icon(
                           Icons.person_outline_rounded,
                           size: 20,
-                          color: theme.colorScheme.onSurface.withOpacity(0.6),
+                          color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
                         ),
                         const SizedBox(width: 8),
                         Expanded(
@@ -106,7 +106,7 @@ class _BookDetailScreenState extends State<BookDetailScreen> {
                             widget.book.author,
                             style: TextStyle(
                               fontSize: 18,
-                              color: theme.colorScheme.onSurface.withOpacity(0.7),
+                              color: theme.colorScheme.onSurface.withValues(alpha: 0.7),
                               fontWeight: FontWeight.w500,
                             ),
                           ),
@@ -118,10 +118,10 @@ class _BookDetailScreenState extends State<BookDetailScreen> {
                     Container(
                       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
                       decoration: BoxDecoration(
-                        color: _getConditionColor(widget.book.condition, theme).withOpacity(0.15),
+                        color: _getConditionColor(widget.book.condition, theme).withValues(alpha: 0.15),
                         borderRadius: BorderRadius.circular(20),
                         border: Border.all(
-                          color: _getConditionColor(widget.book.condition, theme).withOpacity(0.3),
+                          color: _getConditionColor(widget.book.condition, theme).withValues(alpha: 0.3),
                           width: 1,
                         ),
                       ),
@@ -150,10 +150,10 @@ class _BookDetailScreenState extends State<BookDetailScreen> {
                     Container(
                       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                       decoration: BoxDecoration(
-                        color: _getStatusColor(widget.book.status, theme).withOpacity(0.15),
+                        color: _getStatusColor(widget.book.status, theme).withValues(alpha: 0.15),
                         borderRadius: BorderRadius.circular(20),
                         border: Border.all(
-                          color: _getStatusColor(widget.book.status, theme).withOpacity(0.3),
+                          color: _getStatusColor(widget.book.status, theme).withValues(alpha: 0.3),
                           width: 1,
                         ),
                       ),
@@ -305,8 +305,8 @@ class _BookDetailScreenState extends State<BookDetailScreen> {
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
           colors: [
-            theme.colorScheme.primaryContainer.withOpacity(0.5),
-            theme.colorScheme.secondaryContainer.withOpacity(0.3),
+            theme.colorScheme.primaryContainer.withValues(alpha: 0.5),
+            theme.colorScheme.secondaryContainer.withValues(alpha: 0.3),
           ],
         ),
       ),
@@ -317,14 +317,14 @@ class _BookDetailScreenState extends State<BookDetailScreen> {
             Icon(
               Icons.menu_book_rounded,
               size: 80,
-              color: theme.colorScheme.onPrimaryContainer.withOpacity(0.7),
+              color: theme.colorScheme.onPrimaryContainer.withValues(alpha: 0.7),
             ),
             const SizedBox(height: 8),
             Text(
               'No Image',
               style: TextStyle(
                 fontSize: 16,
-                color: theme.colorScheme.onPrimaryContainer.withOpacity(0.6),
+                color: theme.colorScheme.onPrimaryContainer.withValues(alpha: 0.6),
               ),
             ),
           ],

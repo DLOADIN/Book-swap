@@ -48,7 +48,7 @@ class _BrowseScreenState extends State<BrowseScreen> {
         onTap: (i) => setState(() => _index = i),
         type: BottomNavigationBarType.fixed,
         selectedItemColor: theme.colorScheme.primary,
-        unselectedItemColor: theme.colorScheme.onSurface.withOpacity(0.6),
+        unselectedItemColor: theme.colorScheme.onSurface.withValues(alpha: 0.6),
         selectedLabelStyle: const TextStyle(fontWeight: FontWeight.w600),
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home_rounded), label: 'Browse'),
@@ -225,7 +225,7 @@ class __BrowseListState extends State<_BrowseList> {
                 Icon(
                   _searchQuery.isNotEmpty ? Icons.search_off : Icons.menu_book_rounded,
                   size: 80,
-                  color: theme.colorScheme.onSurface.withOpacity(0.3),
+                  color: theme.colorScheme.onSurface.withValues(alpha: 0.3),
                 ),
                 const SizedBox(height: 16),
                 Text(
@@ -233,7 +233,7 @@ class __BrowseListState extends State<_BrowseList> {
                   style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.w600,
-                    color: theme.colorScheme.onSurface.withOpacity(0.6),
+                    color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
                   ),
                 ),
                 const SizedBox(height: 8),
@@ -243,7 +243,7 @@ class __BrowseListState extends State<_BrowseList> {
                       : 'Be the first to post a book!',
                   style: TextStyle(
                     fontSize: 14,
-                    color: theme.colorScheme.onSurface.withOpacity(0.5),
+                    color: theme.colorScheme.onSurface.withValues(alpha: 0.5),
                   ),
                 ),
               ],
@@ -311,7 +311,7 @@ class __BrowseListState extends State<_BrowseList> {
                 Icon(
                   Icons.swap_horiz_rounded,
                   size: 80,
-                  color: theme.colorScheme.onSurface.withOpacity(0.3),
+                  color: theme.colorScheme.onSurface.withValues(alpha: 0.3),
                 ),
                 const SizedBox(height: 16),
                 Text(
@@ -319,7 +319,7 @@ class __BrowseListState extends State<_BrowseList> {
                   style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.w600,
-                    color: theme.colorScheme.onSurface.withOpacity(0.6),
+                    color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
                   ),
                 ),
                 const SizedBox(height: 8),
@@ -327,7 +327,7 @@ class __BrowseListState extends State<_BrowseList> {
                   'You haven\'t received any swap offers yet',
                   style: TextStyle(
                     fontSize: 14,
-                    color: theme.colorScheme.onSurface.withOpacity(0.5),
+                    color: theme.colorScheme.onSurface.withValues(alpha: 0.5),
                   ),
                 ),
               ],
@@ -374,7 +374,7 @@ class _TabButton extends StatelessWidget {
           border: Border.all(
             color: isSelected
                 ? theme.colorScheme.primary
-                : theme.colorScheme.outline.withOpacity(0.3),
+                : theme.colorScheme.outline.withValues(alpha: 0.3),
           ),
         ),
         child: Text(
@@ -457,7 +457,7 @@ class _SwapOfferCard extends StatelessWidget {
                                   'Wants to swap',
                                   style: TextStyle(
                                     fontSize: 14,
-                                    color: theme.colorScheme.onSurface.withOpacity(0.6),
+                                    color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
                                   ),
                                 ),
                               ],
@@ -496,7 +496,7 @@ class _SwapOfferCard extends StatelessWidget {
                           'by ${book.author}',
                           style: TextStyle(
                             fontSize: 14,
-                            color: theme.colorScheme.onSurface.withOpacity(0.7),
+                            color: theme.colorScheme.onSurface.withValues(alpha: 0.7),
                           ),
                         ),
                       ],

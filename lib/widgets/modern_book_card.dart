@@ -35,7 +35,7 @@ class ModernBookCard extends StatelessWidget {
               end: Alignment.bottomRight,
               colors: [
                 theme.colorScheme.surface,
-                theme.colorScheme.surface.withOpacity(0.8),
+                theme.colorScheme.surface.withValues(alpha: 0.8),
               ],
             ),
           ),
@@ -50,8 +50,8 @@ class ModernBookCard extends StatelessWidget {
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
                     colors: [
-                      theme.colorScheme.primary.withOpacity(0.1),
-                      theme.colorScheme.secondary.withOpacity(0.1),
+                      theme.colorScheme.primary.withValues(alpha: 0.1),
+                      theme.colorScheme.secondary.withValues(alpha: 0.1),
                     ],
                   ),
                 ),
@@ -94,7 +94,7 @@ class ModernBookCard extends StatelessWidget {
                             book.author,
                             style: TextStyle(
                               fontSize: 14,
-                              color: theme.colorScheme.onSurface.withOpacity(0.7),
+                              color: theme.colorScheme.onSurface.withValues(alpha: 0.7),
                             ),
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
@@ -123,7 +123,7 @@ class ModernBookCard extends StatelessWidget {
                             ),
                             decoration: BoxDecoration(
                               color: _getConditionColor(book.condition, theme)
-                                  .withOpacity(0.1),
+                                  .withValues(alpha: 0.1),
                               borderRadius: BorderRadius.circular(20),
                               border: Border.all(
                                 color: _getConditionColor(book.condition, theme),
@@ -146,7 +146,7 @@ class ModernBookCard extends StatelessWidget {
                               vertical: 6,
                             ),
                             decoration: BoxDecoration(
-                              color: theme.colorScheme.tertiary.withOpacity(0.1),
+                              color: theme.colorScheme.tertiary.withValues(alpha: 0.1),
                               borderRadius: BorderRadius.circular(20),
                             ),
                             child: Text(
@@ -170,7 +170,7 @@ class ModernBookCard extends StatelessWidget {
                 padding: const EdgeInsets.only(right: 16.0),
                 child: Icon(
                   Icons.arrow_forward_ios_rounded,
-                  color: theme.colorScheme.primary.withOpacity(0.5),
+                  color: theme.colorScheme.primary.withValues(alpha: 0.5),
                   size: 18,
                 ),
               ),
@@ -188,15 +188,15 @@ class ModernBookCard extends StatelessWidget {
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
           colors: [
-            theme.colorScheme.primary.withOpacity(0.2),
-            theme.colorScheme.secondary.withOpacity(0.2),
+            theme.colorScheme.primary.withValues(alpha: 0.2),
+            theme.colorScheme.secondary.withValues(alpha: 0.2),
           ],
         ),
       ),
       child: Icon(
         Icons.menu_book_rounded,
         size: 40,
-        color: theme.colorScheme.primary.withOpacity(0.6),
+        color: theme.colorScheme.primary.withValues(alpha: 0.6),
       ),
     );
   }

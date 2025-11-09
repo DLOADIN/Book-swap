@@ -40,19 +40,17 @@ class MyApp extends StatelessWidget {
               primaryContainer: Color(0xFF4CAF50), // Light Green
               secondary: Color(0xFF66BB6A), // Medium Green
               secondaryContainer: Color(0xFFA5D6A7), // Very Light Green
-              surface: Color(0xFFF1F8E9), // Green Tint Background
-              background: Color(0xFFE8F5E8), // Light Green Background
+              surface: Color(0xFFF1F8E9), // Light Green Background
               onPrimary: Colors.white,
               onSecondary: Colors.white,
-              onSurface: Color(0xFF1B5E20), // Dark Green Text
-              onBackground: Color(0xFF1B5E20),
+              onSurface: Color(0xFF1B5E20),
               tertiary: Color(0xFF81C784), // Accent Green
               error: Color(0xFFD32F2F),
             ),
             scaffoldBackgroundColor: const Color(0xFFE8F5E8),
             cardTheme: CardThemeData(
               elevation: 8,
-              shadowColor: const Color(0xFF2E7D32).withOpacity(0.3),
+              shadowColor: const Color(0xFF2E7D32).withValues(alpha: 0.3),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20),
               ),

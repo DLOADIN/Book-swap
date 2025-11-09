@@ -68,7 +68,7 @@ class _MyLibraryScreenState extends State<MyLibraryScreen>
                               Container(
                                 padding: const EdgeInsets.all(12),
                                 decoration: BoxDecoration(
-                                  color: Colors.white.withOpacity(0.2),
+                                  color: Colors.white.withValues(alpha: 0.2),
                                   borderRadius: BorderRadius.circular(15),
                                 ),
                                 child: Icon(
@@ -93,7 +93,7 @@ class _MyLibraryScreenState extends State<MyLibraryScreen>
                                     Text(
                                       'Manage your book collection',
                                       style: TextStyle(
-                                        color: Colors.white.withOpacity(0.9),
+                                        color: Colors.white.withValues(alpha: 0.9),
                                         fontSize: 16,
                                       ),
                                     ),
@@ -106,7 +106,7 @@ class _MyLibraryScreenState extends State<MyLibraryScreen>
                                 onPressed: () {
                                   Navigator.pushNamed(context, '/add-book');
                                 },
-                                backgroundColor: Colors.white.withOpacity(0.2),
+                                backgroundColor: Colors.white.withValues(alpha: 0.2),
                                 foregroundColor: Colors.white,
                                 child: const Icon(Icons.add_rounded),
                               ),
@@ -123,7 +123,7 @@ class _MyLibraryScreenState extends State<MyLibraryScreen>
                 indicatorColor: Colors.white,
                 indicatorWeight: 3,
                 labelColor: Colors.white,
-                unselectedLabelColor: Colors.white.withOpacity(0.7),
+                unselectedLabelColor: Colors.white.withValues(alpha: 0.7),
                 labelStyle: const TextStyle(
                   fontWeight: FontWeight.w600,
                   fontSize: 16,
@@ -181,7 +181,7 @@ class _MyLibraryScreenState extends State<MyLibraryScreen>
                 Text(
                   'Please try again later',
                   style: TextStyle(
-                    color: theme.colorScheme.onSurface.withOpacity(0.6),
+                    color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
                   ),
                 ),
               ],
@@ -204,7 +204,7 @@ class _MyLibraryScreenState extends State<MyLibraryScreen>
                 Icon(
                   _getEmptyStateIcon(status),
                   size: 80,
-                  color: theme.colorScheme.primary.withOpacity(0.5),
+                  color: theme.colorScheme.primary.withValues(alpha: 0.5),
                 ),
                 const SizedBox(height: 24),
                 Text(
@@ -219,7 +219,7 @@ class _MyLibraryScreenState extends State<MyLibraryScreen>
                 Text(
                   _getEmptyStateSubtitle(status),
                   style: TextStyle(
-                    color: theme.colorScheme.onSurface.withOpacity(0.6),
+                    color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
                   ),
                   textAlign: TextAlign.center,
                 ),

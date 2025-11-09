@@ -89,7 +89,7 @@ class _CommunityScreenState extends State<CommunityScreen>
                                     Text(
                                       'Connect with book lovers',
                                       style: TextStyle(
-                                        color: Colors.white.withOpacity(0.9),
+                                        color: Colors.white.withValues(alpha: 0.9),
                                         fontSize: 16,
                                       ),
                                     ),
@@ -122,13 +122,13 @@ class _CommunityScreenState extends State<CommunityScreen>
                           begin: Alignment.topLeft,
                           end: Alignment.bottomRight,
                           colors: [
-                            theme.colorScheme.primaryContainer.withOpacity(0.3),
-                            theme.colorScheme.secondaryContainer.withOpacity(0.3),
+                            theme.colorScheme.primaryContainer.withValues(alpha: 0.3),
+                            theme.colorScheme.secondaryContainer.withValues(alpha: 0.3),
                           ],
                         ),
                         borderRadius: BorderRadius.circular(20),
                         border: Border.all(
-                          color: theme.colorScheme.primary.withOpacity(0.2),
+                          color: theme.colorScheme.primary.withValues(alpha: 0.2),
                         ),
                       ),
                       child: Column(
@@ -151,7 +151,7 @@ class _CommunityScreenState extends State<CommunityScreen>
                           Text(
                             'Join our growing community of book lovers sharing knowledge and stories',
                             style: TextStyle(
-                              color: theme.colorScheme.onSurface.withOpacity(0.7),
+                              color: theme.colorScheme.onSurface.withValues(alpha: 0.7),
                             ),
                             textAlign: TextAlign.center,
                           ),
@@ -249,7 +249,7 @@ class _CommunityScreenState extends State<CommunityScreen>
                         color: theme.colorScheme.surface,
                         borderRadius: BorderRadius.circular(15),
                         border: Border.all(
-                          color: theme.colorScheme.outline.withOpacity(0.2),
+                          color: theme.colorScheme.outline.withValues(alpha: 0.2),
                         ),
                       ),
                       child: Column(
@@ -279,7 +279,7 @@ class _CommunityScreenState extends State<CommunityScreen>
                             '• No spam, harassment, or inappropriate content\n'
                             '• Honor your book swap commitments',
                             style: TextStyle(
-                              color: theme.colorScheme.onSurface.withOpacity(0.7),
+                              color: theme.colorScheme.onSurface.withValues(alpha: 0.7),
                               height: 1.5,
                             ),
                           ),
@@ -311,7 +311,7 @@ class _CommunityScreenState extends State<CommunityScreen>
           label,
           style: TextStyle(
             fontSize: 12,
-            color: theme.colorScheme.onSurface.withOpacity(0.7),
+            color: theme.colorScheme.onSurface.withValues(alpha: 0.7),
           ),
         ),
       ],
@@ -342,7 +342,7 @@ class _CommunityScreenState extends State<CommunityScreen>
               Container(
                 padding: const EdgeInsets.all(12),
                 decoration: BoxDecoration(
-                  color: color.withOpacity(0.1),
+                  color: color.withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Icon(
@@ -377,7 +377,7 @@ class _CommunityScreenState extends State<CommunityScreen>
                       description,
                       style: TextStyle(
                         fontSize: 14,
-                        color: theme.colorScheme.onSurface.withOpacity(0.7),
+                        color: theme.colorScheme.onSurface.withValues(alpha: 0.7),
                       ),
                     ),
                   ],
@@ -385,7 +385,7 @@ class _CommunityScreenState extends State<CommunityScreen>
               ),
               Icon(
                 Icons.arrow_forward_ios_rounded,
-                color: theme.colorScheme.onSurface.withOpacity(0.3),
+                color: theme.colorScheme.onSurface.withValues(alpha: 0.3),
                 size: 16,
               ),
             ],

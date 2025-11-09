@@ -171,7 +171,7 @@ class _MyListingsScreenState extends State<MyListingsScreen> {
                 Icon(
                   _searchQuery.isNotEmpty ? Icons.search_off : Icons.inventory_2_outlined,
                   size: 80,
-                  color: theme.colorScheme.onSurface.withOpacity(0.3),
+                  color: theme.colorScheme.onSurface.withValues(alpha: 0.3),
                 ),
                 const SizedBox(height: 16),
                 Text(
@@ -191,7 +191,7 @@ class _MyListingsScreenState extends State<MyListingsScreen> {
                         : 'Tap the + button to post your first book',
                     style: TextStyle(
                       fontSize: 14,
-                      color: theme.colorScheme.onSurface.withOpacity(0.6),
+                      color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
                     ),
                     textAlign: TextAlign.center,
                   ),
@@ -257,7 +257,7 @@ class _MyListingsScreenState extends State<MyListingsScreen> {
                 Icon(
                   Icons.swap_horiz_rounded,
                   size: 80,
-                  color: theme.colorScheme.onSurface.withOpacity(0.3),
+                  color: theme.colorScheme.onSurface.withValues(alpha: 0.3),
                 ),
                 const SizedBox(height: 16),
                 Text(
@@ -265,7 +265,7 @@ class _MyListingsScreenState extends State<MyListingsScreen> {
                   style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.w600,
-                    color: theme.colorScheme.onSurface.withOpacity(0.6),
+                    color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
                   ),
                 ),
                 const SizedBox(height: 8),
@@ -273,7 +273,7 @@ class _MyListingsScreenState extends State<MyListingsScreen> {
                   'You haven\'t received any swap offers yet',
                   style: TextStyle(
                     fontSize: 14,
-                    color: theme.colorScheme.onSurface.withOpacity(0.5),
+                    color: theme.colorScheme.onSurface.withValues(alpha: 0.5),
                   ),
                 ),
               ],
@@ -320,7 +320,7 @@ class _TabButton extends StatelessWidget {
           border: Border.all(
             color: isSelected
                 ? theme.colorScheme.primary
-                : theme.colorScheme.outline.withOpacity(0.3),
+                : theme.colorScheme.outline.withValues(alpha: 0.3),
           ),
         ),
         child: Text(
@@ -403,7 +403,7 @@ class _SwapOfferCard extends StatelessWidget {
                                   'Wants to swap',
                                   style: TextStyle(
                                     fontSize: 14,
-                                    color: theme.colorScheme.onSurface.withOpacity(0.6),
+                                    color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
                                   ),
                                 ),
                               ],
@@ -442,7 +442,7 @@ class _SwapOfferCard extends StatelessWidget {
                           'by ${book.author}',
                           style: TextStyle(
                             fontSize: 14,
-                            color: theme.colorScheme.onSurface.withOpacity(0.7),
+                            color: theme.colorScheme.onSurface.withValues(alpha: 0.7),
                           ),
                         ),
                       ],

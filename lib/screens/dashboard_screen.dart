@@ -80,7 +80,7 @@ class _DashboardScreenState extends State<DashboardScreen>
                             children: [
                               CircleAvatar(
                                 radius: 25,
-                                backgroundColor: Colors.white.withOpacity(0.2),
+                                backgroundColor: Colors.white.withValues(alpha: 0.2),
                                 child: Icon(
                                   Icons.eco_rounded,
                                   color: Colors.white,
@@ -95,7 +95,7 @@ class _DashboardScreenState extends State<DashboardScreen>
                                     Text(
                                       'Welcome back,',
                                       style: TextStyle(
-                                        color: Colors.white.withOpacity(0.9),
+                                        color: Colors.white.withValues(alpha: 0.9),
                                         fontSize: 16,
                                       ),
                                     ),
@@ -174,7 +174,7 @@ class _DashboardScreenState extends State<DashboardScreen>
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
-                        color: theme.colorScheme.onBackground,
+                        color: theme.colorScheme.onSurface,
                       ),
                     ),
                     const SizedBox(height: 16),
@@ -213,7 +213,7 @@ class _DashboardScreenState extends State<DashboardScreen>
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
-                        color: theme.colorScheme.onBackground,
+                        color: theme.colorScheme.onSurface,
                       ),
                     ),
                     const SizedBox(height: 16),
@@ -243,7 +243,7 @@ class _DashboardScreenState extends State<DashboardScreen>
                         color: theme.colorScheme.surface,
                         borderRadius: BorderRadius.circular(20),
                         border: Border.all(
-                          color: theme.colorScheme.outline.withOpacity(0.2),
+                          color: theme.colorScheme.outline.withValues(alpha: 0.2),
                         ),
                       ),
                       child: Column(
@@ -252,7 +252,7 @@ class _DashboardScreenState extends State<DashboardScreen>
                           Icon(
                             Icons.menu_book_outlined,
                             size: 64,
-                            color: theme.colorScheme.primary.withOpacity(0.5),
+                            color: theme.colorScheme.primary.withValues(alpha: 0.5),
                           ),
                           const SizedBox(height: 16),
                           Text(
@@ -267,7 +267,7 @@ class _DashboardScreenState extends State<DashboardScreen>
                           Text(
                             'Add your first book to get started!',
                             style: TextStyle(
-                              color: theme.colorScheme.onSurface.withOpacity(0.6),
+                              color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
                             ),
                           ),
                         ],

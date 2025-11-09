@@ -18,7 +18,7 @@ class _ExploreBooksScreenState extends State<ExploreBooksScreen>
   late Animation<double> _slideAnimation;
   final TextEditingController _searchController = TextEditingController();
   String _searchQuery = '';
-  List<String> _selectedFilters = [];
+  final List<String> _selectedFilters = [];
 
   @override
   void initState() {
@@ -118,7 +118,7 @@ class _ExploreBooksScreenState extends State<ExploreBooksScreen>
                       ),
                       boxShadow: [
                         BoxShadow(
-                          color: theme.colorScheme.primary.withOpacity(0.1),
+                          color: theme.colorScheme.primary.withValues(alpha: 0.1),
                           blurRadius: 10,
                           offset: const Offset(0, 2),
                         ),
@@ -129,10 +129,10 @@ class _ExploreBooksScreenState extends State<ExploreBooksScreen>
                         // Search Bar
                         Container(
                           decoration: BoxDecoration(
-                            color: theme.colorScheme.background,
+                            color: theme.colorScheme.surface,
                             borderRadius: BorderRadius.circular(20),
                             border: Border.all(
-                              color: theme.colorScheme.primary.withOpacity(0.2),
+                              color: theme.colorScheme.primary.withValues(alpha: 0.2),
                             ),
                           ),
                           child: TextField(
@@ -158,7 +158,7 @@ class _ExploreBooksScreenState extends State<ExploreBooksScreen>
                                       },
                                       icon: Icon(
                                         Icons.clear_rounded,
-                                        color: theme.colorScheme.onSurface.withOpacity(0.6),
+                                        color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
                                       ),
                                     )
                                   : null,
@@ -233,7 +233,7 @@ class _ExploreBooksScreenState extends State<ExploreBooksScreen>
                         Text(
                           'Please try again later',
                           style: TextStyle(
-                            color: theme.colorScheme.onSurface.withOpacity(0.6),
+                            color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
                           ),
                         ),
                       ],
@@ -251,7 +251,7 @@ class _ExploreBooksScreenState extends State<ExploreBooksScreen>
                         Icon(
                           Icons.library_books_outlined,
                           size: 64,
-                          color: theme.colorScheme.primary.withOpacity(0.5),
+                          color: theme.colorScheme.primary.withValues(alpha: 0.5),
                         ),
                         const SizedBox(height: 16),
                         Text(
@@ -266,7 +266,7 @@ class _ExploreBooksScreenState extends State<ExploreBooksScreen>
                         Text(
                           'Be the first to add a book!',
                           style: TextStyle(
-                            color: theme.colorScheme.onSurface.withOpacity(0.6),
+                            color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
                           ),
                         ),
                       ],
@@ -296,7 +296,7 @@ class _ExploreBooksScreenState extends State<ExploreBooksScreen>
                         Icon(
                           Icons.search_off_rounded,
                           size: 64,
-                          color: theme.colorScheme.primary.withOpacity(0.5),
+                          color: theme.colorScheme.primary.withValues(alpha: 0.5),
                         ),
                         const SizedBox(height: 16),
                         Text(
@@ -311,7 +311,7 @@ class _ExploreBooksScreenState extends State<ExploreBooksScreen>
                         Text(
                           'Try adjusting your search',
                           style: TextStyle(
-                            color: theme.colorScheme.onSurface.withOpacity(0.6),
+                            color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
                           ),
                         ),
                       ],
@@ -374,12 +374,12 @@ class _ExploreBooksScreenState extends State<ExploreBooksScreen>
           });
         },
         backgroundColor: theme.colorScheme.surface,
-        selectedColor: theme.colorScheme.primary.withOpacity(0.2),
+        selectedColor: theme.colorScheme.primary.withValues(alpha: 0.2),
         checkmarkColor: theme.colorScheme.primary,
         labelStyle: TextStyle(
           color: isSelected 
               ? theme.colorScheme.primary 
-              : theme.colorScheme.onSurface.withOpacity(0.7),
+              : theme.colorScheme.onSurface.withValues(alpha: 0.7),
           fontWeight: isSelected ? FontWeight.w600 : FontWeight.normal,
         ),
         shape: RoundedRectangleBorder(
@@ -387,7 +387,7 @@ class _ExploreBooksScreenState extends State<ExploreBooksScreen>
           side: BorderSide(
             color: isSelected 
                 ? theme.colorScheme.primary 
-                : theme.colorScheme.outline.withOpacity(0.3),
+                : theme.colorScheme.outline.withValues(alpha: 0.3),
           ),
         ),
       ),

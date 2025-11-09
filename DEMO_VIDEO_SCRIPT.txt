@@ -1,0 +1,95 @@
+EcoBookHub Demo Video Script
+Individual Assignment 2 - Mobile Application Development
+Duration: 7-8 minutes
+
+SETUP BEFORE RECORDING:
+- Firebase Console open in browser
+- App running on mobile device/emulator
+- Test accounts: testuser1@example.com, testuser2@example.com
+- Sample book images ready
+
+INTRODUCTION (0:00 - 0:30)
+"Hello! I'm presenting EcoBookHub, my sustainable book exchange platform for Individual Assignment 2. This Flutter app demonstrates complete CRUD operations with Firebase, real-time state management using Provider, and modern Material Design 3 with a custom green theme."
+
+1. AUTHENTICATION FLOW (0:30 - 1:30)
+Show app + Firebase Console Authentication tab
+- Create new account: John Student, testuser1@example.com
+- Demonstrate email verification requirement
+- Show real-time user creation in Firebase Console
+- Sign in with verified account
+- Navigate to main dashboard
+
+2. NAVIGATION & STATE MANAGEMENT (1:30 - 2:00)
+Show main navigation: Dashboard, Explore, My Library, Community, Profile
+"Implemented using Provider pattern for efficient state management. Notice smooth transitions and persistent state across screens."
+
+3. CRUD OPERATIONS (2:00 - 4:30)
+Split screen: App + Firebase Firestore Console
+
+CREATE (2:00 - 2:45):
+- Add new book: "Flutter Development Guide" by Google Team
+- Upload cover image (Firebase Storage)
+- Show new document in Firestore Console immediately
+
+READ (2:45 - 3:15):
+- Browse books in Explore section
+- Show StreamBuilder real-time updates
+- Demonstrate book detail views with condition badges
+
+UPDATE (3:15 - 4:00):
+- Edit book condition from "Like New" to "Good"
+- Show document update in Firebase Console
+- UI updates automatically via Provider
+
+DELETE (4:00 - 4:30):
+- Remove book with confirmation dialog
+- Document disappears from Firestore Console
+- UI updates without manual refresh
+
+4. SWAP FUNCTIONALITY (4:30 - 6:00)
+Use second device/account:
+- Sign in as testuser2@example.com
+- Request swap for Flutter guide
+- Show real-time updates in Firebase:
+  * New swapOffers collection document
+  * Book status changes to pending
+  * Both users see instant notifications
+- Accept swap request
+- Show status updates to "swapped"
+
+5. CHAT FEATURE (6:00 - 6:30)
+- Open chat between users
+- Send message from user 1 to user 2
+- Show message document in Firestore Console
+- Demonstrate instant message delivery
+- Show reply functionality
+
+6. TECHNICAL ARCHITECTURE (6:30 - 7:30)
+"Technical implementation highlights:
+- AuthProvider manages authentication state
+- BookProvider handles book operations
+- Real-time listeners with StreamBuilder widgets
+- Clean architecture: Models, Providers, Screens, Services, Widgets
+- Firebase integration: Auth, Firestore, Storage
+- Material Design 3 with custom theming"
+
+Show app responding to backend changes in real-time.
+
+CONCLUSION (7:30 - 8:00)
+"EcoBookHub demonstrates:
+✓ Complete Firebase integration with real-time sync
+✓ Professional Provider state management
+✓ Full CRUD operations
+✓ Modern mobile UI/UX
+✓ Zero critical errors in Dart analyzer
+✓ Production-ready code quality
+
+The app fulfills all assignment requirements while showcasing professional mobile development practices. Thank you!"
+
+KEY REMINDERS:
+- Always show Firebase Console alongside app actions
+- Emphasize real-time synchronization
+- Mention Provider state management
+- Point out clean architecture
+- Connect actions to assignment requirements
+- Keep transitions smooth and professional

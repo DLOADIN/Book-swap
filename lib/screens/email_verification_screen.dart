@@ -97,7 +97,7 @@ class _EmailVerificationScreenState extends State<EmailVerificationScreen> {
                 'We\'ve sent a verification email to:',
                 style: TextStyle(
                   fontSize: 16,
-                  color: theme.colorScheme.onSurface.withOpacity(0.7),
+                  color: theme.colorScheme.onSurface.withValues(alpha: 0.7),
                 ),
                 textAlign: TextAlign.center,
               ),
@@ -108,7 +108,7 @@ class _EmailVerificationScreenState extends State<EmailVerificationScreen> {
                   color: theme.colorScheme.surface,
                   borderRadius: BorderRadius.circular(12),
                   border: Border.all(
-                    color: theme.colorScheme.outline.withOpacity(0.2),
+                    color: theme.colorScheme.outline.withValues(alpha: 0.2),
                   ),
                 ),
                 child: Text(
@@ -126,7 +126,7 @@ class _EmailVerificationScreenState extends State<EmailVerificationScreen> {
                 'Please check your email and click the verification link to activate your account.',
                 style: TextStyle(
                   fontSize: 14,
-                  color: theme.colorScheme.onSurface.withOpacity(0.6),
+                  color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
                 ),
                 textAlign: TextAlign.center,
               ),
@@ -203,7 +203,7 @@ class _EmailVerificationScreenState extends State<EmailVerificationScreen> {
                   'Back to Sign In',
                   style: TextStyle(
                     fontSize: 14,
-                    color: theme.colorScheme.onSurface.withOpacity(0.6),
+                    color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
                   ),
                 ),
               ),

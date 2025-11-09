@@ -62,7 +62,7 @@ class ChatScreen extends StatelessWidget {
                 Icon(
                   Icons.chat_bubble_outline_rounded,
                   size: 80,
-                  color: theme.colorScheme.onSurface.withOpacity(0.3),
+                  color: theme.colorScheme.onSurface.withValues(alpha: 0.3),
                 ),
                 const SizedBox(height: 16),
                 Text(
@@ -80,7 +80,7 @@ class ChatScreen extends StatelessWidget {
                     'Request a swap to start chatting with other users',
                     style: TextStyle(
                       fontSize: 14,
-                      color: theme.colorScheme.onSurface.withOpacity(0.6),
+                      color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
                     ),
                     textAlign: TextAlign.center,
                   ),
@@ -203,7 +203,7 @@ class _ChatTile extends StatelessWidget {
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
               style: TextStyle(
-                color: theme.colorScheme.onSurface.withOpacity(0.6),
+                color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
                 fontSize: 14,
               ),
             ),
@@ -212,7 +212,7 @@ class _ChatTile extends StatelessWidget {
                     _formatTimestamp(lastMessageTime),
                     style: TextStyle(
                       fontSize: 12,
-                      color: theme.colorScheme.onSurface.withOpacity(0.5),
+                      color: theme.colorScheme.onSurface.withValues(alpha: 0.5),
                     ),
                   )
                 : null,
@@ -483,7 +483,7 @@ class _ChatDetailScreenState extends State<ChatDetailScreen> {
                           Icon(
                             Icons.chat_bubble_outline_rounded,
                             size: 60,
-                            color: theme.colorScheme.onSurface.withOpacity(0.3),
+                            color: theme.colorScheme.onSurface.withValues(alpha: 0.3),
                           ),
                           const SizedBox(height: 16),
                           Text(
@@ -491,7 +491,7 @@ class _ChatDetailScreenState extends State<ChatDetailScreen> {
                             style: TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.w600,
-                              color: theme.colorScheme.onSurface.withOpacity(0.6),
+                              color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
                             ),
                           ),
                           const SizedBox(height: 8),
@@ -499,7 +499,7 @@ class _ChatDetailScreenState extends State<ChatDetailScreen> {
                             'Start the conversation!',
                             style: TextStyle(
                               fontSize: 14,
-                              color: theme.colorScheme.onSurface.withOpacity(0.5),
+                              color: theme.colorScheme.onSurface.withValues(alpha: 0.5),
                             ),
                           ),
                         ],
@@ -547,7 +547,7 @@ class _ChatDetailScreenState extends State<ChatDetailScreen> {
                                   decoration: BoxDecoration(
                                     color: isMe
                                         ? theme.colorScheme.primary
-                                        : theme.colorScheme.surfaceVariant,
+                                        : theme.colorScheme.surfaceContainerHighest,
                                     borderRadius: BorderRadius.only(
                                       topLeft: const Radius.circular(16),
                                       topRight: const Radius.circular(16),
@@ -576,7 +576,7 @@ class _ChatDetailScreenState extends State<ChatDetailScreen> {
                                             color: (isMe
                                                     ? theme.colorScheme.onPrimary
                                                     : theme.colorScheme.onSurfaceVariant)
-                                                .withOpacity(0.6),
+                                                .withValues(alpha: 0.6),
                                           ),
                                         ),
                                     ],
@@ -613,7 +613,7 @@ class _ChatDetailScreenState extends State<ChatDetailScreen> {
                 color: theme.colorScheme.surface,
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.black.withOpacity(0.1),
+                    color: Colors.black.withValues(alpha: 0.1),
                     blurRadius: 4,
                     offset: const Offset(0, -2),
                   ),
@@ -632,7 +632,7 @@ class _ChatDetailScreenState extends State<ChatDetailScreen> {
                         borderSide: BorderSide.none,
                       ),
                       filled: true,
-                      fillColor: theme.colorScheme.surfaceVariant,
+                      fillColor: theme.colorScheme.surfaceContainerHighest,
                       contentPadding: const EdgeInsets.symmetric(
                         horizontal: 20,
                         vertical: 12,
